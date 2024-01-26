@@ -13,7 +13,7 @@ const Login = () => {
   return (
     <Container position="relative" overflow="hidden">
       <video
-        autoPlay
+        autoPlay={true}
         muted
         loop
         style={{
