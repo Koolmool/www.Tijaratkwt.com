@@ -1,6 +1,6 @@
 import { Box, Button, Center, Container, Divider, Heading, Input, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import { useRef } from "react";
-import { FaGoogle, FaApple, FaEnvelope } from "react-icons/fa";
+import { FaGoogle, FaApple, FaEnvelope, FaYahoo, FaWindows, FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Index = () => {
   const emailInputRef = useRef(null);
@@ -61,22 +61,22 @@ const Index = () => {
           <Divider />
         </Center>
         <Stack spacing="4">
-          <Button leftIcon={<FaGoogle />} variant="outline" size="sm" colorScheme="brand">
+          <Button leftIcon={<FaGoogle size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Google
           </Button>
-          <Button leftIcon={<FaApple />} variant="outline" size="sm" colorScheme="blackAlpha">
+          <Button leftIcon={<FaApple size="20px" />} variant="outline" size="sm" colorScheme="blackAlpha">
             Sign in with Apple
           </Button>
-          <Button variant="outline" size="sm" colorScheme="brand">
+          <Button leftIcon={<FaYahoo size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Yahoo
           </Button>
-          <Button variant="outline" size="sm" colorScheme="brand">
+          <Button leftIcon={<FaWindows size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Outlook
           </Button>
-          <Button variant="outline" size="sm" colorScheme="brand">
+          <Button leftIcon={<FaFacebookF size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Facebook
           </Button>
-          <Button variant="outline" size="sm" colorScheme="brand">
+          <Button leftIcon={<FaInstagram size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Instagram
           </Button>
         </Stack>
