@@ -5,10 +5,8 @@ import { FaGoogle, FaApple, FaEnvelope } from "react-icons/fa";
 const Index = () => {
   const emailInputRef = useRef(null);
 
+  // Removed the useMockServer call since it's not defined
   const saveAccountInformation = (email) => {
-    // Simulate sending data to the backend server
-    const { saveData } = useMockServer();
-    saveData(`account-${email}`, { email });
     console.log(`Account creation requested for:`, email);
   };
 
@@ -42,8 +40,12 @@ const Index = () => {
                   </Button>
                   <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
                     New to Tijarat?{" "}
-                    <a href="#" style={{ color: "blue", fontWeight: "bold" }}>
+                    <a href="/create-account" style={{ color: "blue", fontWeight: "bold" }}>
                       Click here to verify your account
+                    </a>{" "}
+                    or{" "}
+                    <a href="/login" style={{ color: "blue", fontWeight: "bold" }}>
+                      log in
                     </a>
                   </Text>
                 </Stack>
