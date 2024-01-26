@@ -12,7 +12,13 @@ export const useMockServer = () => {
     console.log("Data saved to mock server:", newData);
   };
 
+  // Simulate a webhook event being received
+  const simulateWebhook = (eventData) => {
+    console.log("Webhook event received:", eventData);
+    // Here you would typically update your state or perform some action in response to the webhook event
+  };
+
   // Add other server simulation functions here if needed
 
-  return { saveData };
+  return { saveData, simulateWebhook };
 };

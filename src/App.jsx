@@ -1,8 +1,10 @@
+import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import Profile from "./pages/Profile";
+import WebhookListener from "./components/WebhookListener";
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/profile/:customerId" element={<Profile />} />
       </Routes>
+      <WebhookListener />
     </Router>
   );
 }
