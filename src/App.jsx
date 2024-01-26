@@ -5,10 +5,12 @@ import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import Profile from "./pages/Profile";
 import WebhookListener from "./components/WebhookListener";
+import MockServerURLDisplay from "./components/MockServerURLDisplay"; // Import the MockServerURLDisplay component
 
 function App() {
   return (
     <Router>
+      <MockServerURLDisplay /> {/* Display the mock server URL at the top */}
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
