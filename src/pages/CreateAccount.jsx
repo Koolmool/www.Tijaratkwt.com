@@ -23,6 +23,10 @@ const CreateAccount = () => {
             <FormLabel>Location</FormLabel>
             <Input type="text" />
           </FormControl>
+          <FormControl id="phoneNumber">
+            <FormLabel>Phone Number</FormLabel>
+            <Input type="tel" />
+          </FormControl>
           <FormControl id="email">
             <FormLabel>Email</FormLabel>
             <Input type="email" />
