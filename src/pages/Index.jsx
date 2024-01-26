@@ -36,6 +36,24 @@ const Index = () => {
           <Button leftIcon={<FaApple />} variant="outline" size="lg" colorScheme="blackAlpha">
             Sign in with Apple
           </Button>
+          <Button variant="outline" size="lg" colorScheme="brand">
+            Sign in with Yahoo
+          </Button>
+          <Button variant="outline" size="lg" colorScheme="brand">
+            Sign in with Outlook
+          </Button>
+          <Button variant="outline" size="lg" colorScheme="brand">
+            Sign in with Facebook
+          </Button>
+          <Button variant="outline" size="lg" colorScheme="brand">
+            Sign in with Instagram
+          </Button>
+          <Button variant="outline" size="lg" colorScheme="brand">
+            Sign in with Snapchat
+          </Button>
+          <Button variant="outline" size="lg" colorScheme="brand">
+            Sign in with Samsung
+          </Button>
         </Stack>
       </Stack>
     </Container>
