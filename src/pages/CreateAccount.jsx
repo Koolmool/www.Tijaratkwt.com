@@ -23,7 +23,7 @@ const CreateAccount = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("https://your-server-endpoint/customers", {
+      const response = await fetch("https://api.example.com/create-account", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

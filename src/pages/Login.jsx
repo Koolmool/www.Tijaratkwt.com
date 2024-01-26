@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("https://your-server-endpoint/users/login", {
+      const response = await fetch("https://api.example.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
