@@ -16,7 +16,7 @@ const Index = () => {
               <Stack spacing="5">
                 <Input placeholder="Enter your email" type="email" />
               </Stack>
-              <Button variant="solid" colorScheme="blue" size="lg" fontSize="md">
+              <Button variant="solid" colorScheme="brand" size="lg" fontSize="md">
                 Sign in with Email <FaEnvelope style={{ marginLeft: "8px" }} />
               </Button>
             </Stack>
@@ -30,7 +30,7 @@ const Index = () => {
           <Divider />
         </Center>
         <Stack spacing="4">
-          <Button leftIcon={<FaGoogle />} variant="outline" size="lg">
+          <Button leftIcon={<FaGoogle />} variant="outline" size="lg" colorScheme="brand">
             Sign in with Google
           </Button>
           <Button leftIcon={<FaApple />} variant="outline" size="lg" colorScheme="blackAlpha">
