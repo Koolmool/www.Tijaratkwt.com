@@ -11,7 +11,21 @@ const Login = () => {
     alert("Login attempt with email: " + email + " and password: " + password);
   };
   return (
-    <Container>
+    <Container position="relative" overflow="hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        style={{
+          position: "absolute",
+          right: "0",
+          bottom: "0",
+          minWidth: "100%",
+          minHeight: "100%",
+          zIndex: "-1",
+        }}
+        src="/assets/login-background.mp4"
+      ></video>
       <Box>
         <Heading>Login Page</Heading>
         <Box as="form" onSubmit={handleLogin} p={4}>
