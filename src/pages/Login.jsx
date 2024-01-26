@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import { useMockServer } from "../mockServer";
 import { Box, Button, Container, FormControl, FormLabel, Heading, Input, Stack, Text } from "@chakra-ui/react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { saveData } = useMockServer();
+
   const handleLogin = (event) => {
     event.preventDefault();
-    // Implement login logic here
-    alert("Login attempt with email: " + email + " and password: " + password);
+    // Save the user's login information
+    saveData("users", { email, password });
+    console.log("Login attempt with email: " + email + " and password: " + password);
   };
   return (
     <Container position="relative" overflow="hidden">
