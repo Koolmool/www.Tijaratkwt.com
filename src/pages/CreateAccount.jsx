@@ -36,7 +36,8 @@ const CreateAccount = () => {
       }
 
       const result = await response.json();
-      console.log("Data saved to server:", result);
+      // Assuming result contains the customer ID or some form of identifier
+      window.location.href = `/profile/${result.customerId}`;
     } catch (error) {
       console.error("A problem occurred while saving data:", error);
     }
