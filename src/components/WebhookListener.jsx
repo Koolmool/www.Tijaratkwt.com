@@ -29,13 +29,8 @@ const WebhookListener = () => {
     };
   }, [saveData]); // Add saveData to the dependency array
 
-  if (!webhookData) return null;
-
-  return (
-    <div>
-      Webhook event received: <pre>{JSON.stringify(webhookData, null, 2)}</pre>
-    </div>
-  );
+  // Removed the rendering of webhookData as it should not be shown on the website
+  return null;
 };
 
 export default WebhookListener;
