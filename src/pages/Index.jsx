@@ -8,7 +8,7 @@ const Index = () => {
         <Stack spacing="6">
           <Center>
             <Heading fontSize={{ base: "2xl", md: "3xl" }} textAlign="center">
-              Welcome Back to Your Shop Name
+              Welcome Back to Tijarat
             </Heading>
           </Center>
           <Box bg={useColorModeValue("white", "gray.700")} py="8" px={{ base: "4", md: "10" }} shadow="base" rounded={{ sm: "lg" }}>
@@ -21,7 +21,7 @@ const Index = () => {
                   Sign in with Email <FaEnvelope style={{ marginLeft: "8px" }} />
                 </Button>
                 <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
-                  New to Your Shop Name?{" "}
+                  New to Tijarat?{" "}
                   <Text as="span" color="brand.600" fontWeight="bold">
                     Create an account
                   </Text>
