@@ -79,12 +79,6 @@ const Index = () => {
           <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Instagram
           </Button>
-          <Button variant="outline" size="sm" colorScheme="brand">
-            Sign in with Snapchat
-          </Button>
-          <Button variant="outline" size="sm" colorScheme="brand">
-            Sign in with Samsung
-          </Button>
         </Stack>
       </Stack>
     </Container>
