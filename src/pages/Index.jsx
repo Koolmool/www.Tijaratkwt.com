@@ -17,7 +17,7 @@ const Index = () => {
                 <Input placeholder="Enter your email" type="email" />
               </Stack>
               <Stack spacing="5">
-                <Button variant="solid" colorScheme="brand" size="lg" fontSize="md">
+                <Button variant="solid" colorScheme="brand" size="lg" fontSize="md" color="black">
                   Sign in with Email <FaEnvelope style={{ marginLeft: "8px" }} />
                 </Button>
                 <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
