@@ -29,5 +29,5 @@ export const useMockServer = () => {
 
   // Add other server simulation functions here if needed
 
-  return { saveData, simulateWebhook };
+  return { saveData, simulateWebhook, sendCustomerWebhook };
 };

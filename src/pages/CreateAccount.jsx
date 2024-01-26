@@ -36,7 +36,7 @@ const CreateAccount = () => {
       }
 
       const result = await response.json();
-      // Assuming result contains the customer ID or some form of identifier
+      useMockServer().sendCustomerWebhook(result); // Simulate sending a webhook when an account is created
       window.location.href = `/profile/${result.customerId}`;
     } catch (error) {
       console.error("A problem occurred while saving data:", error);
