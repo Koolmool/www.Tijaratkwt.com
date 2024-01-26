@@ -18,6 +18,11 @@ export const useMockServer = () => {
     // Here you would typically update your state or perform some action in response to the webhook event
   };
 
+  const sendCustomerWebhook = (customerData) => {
+    console.log("Sending customer webhook:", customerData);
+    // Here you would typically send a webhook to the frontend with the customer data
+  };
+
   // Add other server simulation functions here if needed
 
   return { saveData, simulateWebhook };

@@ -4,15 +4,16 @@ const WebhookListener = () => {
   const [webhookData, setWebhookData] = useState(null);
 
   useEffect(() => {
-    // Placeholder for webhook setup logic
+    // Updated webhook setup logic to handle customer information
     const listenToWebhook = () => {
-      // Simulated incoming webhook data
+      // Extend simulated incoming webhook data to include customer information
       const simulatedData = {
-        event: "order_created",
+        event: "customer_information",
         data: {
-          orderId: 12345,
+          customerId: "C123",
           customerName: "Jane Doe",
-          totalAmount: 100,
+          customerEmail: "jane.doe@example.com",
+          customerLocation: "123 Main Street, Anytown",
         },
       };
       setWebhookData(simulatedData);
