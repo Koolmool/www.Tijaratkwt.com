@@ -61,28 +61,28 @@ const Index = () => {
           <Divider />
         </Center>
         <Stack spacing="4">
-          <Button leftIcon={<FaGoogle />} variant="outline" size="lg" colorScheme="brand">
+          <Button leftIcon={<FaGoogle />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Google
           </Button>
-          <Button leftIcon={<FaApple />} variant="outline" size="lg" colorScheme="blackAlpha">
+          <Button leftIcon={<FaApple />} variant="outline" size="sm" colorScheme="blackAlpha">
             Sign in with Apple
           </Button>
-          <Button variant="outline" size="lg" colorScheme="brand">
+          <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Yahoo
           </Button>
-          <Button variant="outline" size="lg" colorScheme="brand">
+          <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Outlook
           </Button>
-          <Button variant="outline" size="lg" colorScheme="brand">
+          <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Facebook
           </Button>
-          <Button variant="outline" size="lg" colorScheme="brand">
+          <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Instagram
           </Button>
-          <Button variant="outline" size="lg" colorScheme="brand">
+          <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Snapchat
           </Button>
-          <Button variant="outline" size="lg" colorScheme="brand">
+          <Button variant="outline" size="sm" colorScheme="brand">
             Sign in with Samsung
           </Button>
         </Stack>
