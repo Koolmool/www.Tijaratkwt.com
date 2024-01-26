@@ -6,7 +6,14 @@ const Login = () => {
     <Container>
       <Box>
         <Heading>Login Page</Heading>
-        {/* Login form and logic goes here */}
+        <Box as="form" p={4}>
+          {/* Existing login form fields go here */}
+
+          {/* Add a "Forgot Password?" link below the password field */}
+          <Text mt={2} textAlign="right" color="brand.700" cursor="pointer" onClick={() => alert("Password recovery instructions will be sent to your email.")}>
+            Forgot Password?
+          </Text>
+        </Box>
       </Box>
     </Container>
   );
