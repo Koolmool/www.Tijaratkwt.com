@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+import { useMockServer } from "../mockServer"; // Import useMockServer
+
 const WebhookListener = () => {
   const [webhookData, setWebhookData] = useState(null);
+  const { saveData } = useMockServer(); // use saveData function from useMockServer
 
   useEffect(() => {
-    // Updated webhook setup logic to handle customer information
     const listenToWebhook = () => {
-      // Extend simulated incoming webhook data to include customer information
+      // Simulated incoming webhook data
       const simulatedData = {
         event: "customer_information",
         data: {
@@ -17,15 +19,15 @@ const WebhookListener = () => {
         },
       };
       setWebhookData(simulatedData);
+      saveData(simulatedData.data.customerId, simulatedData.data); // Save the customer information from the webhook
     };
 
     listenToWebhook();
 
-    // Cleanup function in case of component unmounting
     return () => {
-      // Placeholder for cleanup logic, e.g. unsubscribing from events
+      // Cleanup logic (if necessary)
     };
-  }, []);
+  }, [saveData]); // Add saveData to the dependency array
 
   if (!webhookData) return null;
 
