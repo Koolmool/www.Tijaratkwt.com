@@ -41,7 +41,7 @@ const Index = () => {
                   <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
                     New to Tijarat?{" "}
                     <a href="/create-account" style={{ color: "blue", fontWeight: "bold" }}>
-                      Click here to verify your account
+                      Click here to create your own account in Tijarat
                     </a>{" "}
                     or{" "}
                     <a href="/login" style={{ color: "blue", fontWeight: "bold" }}>
