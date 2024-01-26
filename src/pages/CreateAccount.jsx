@@ -22,9 +22,11 @@ const CreateAccount = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you would typically handle the form submission, e.g., send data to a server
-    // For now, we'll just log the formData to console and reset form data
-    console.log(formData);
+    // Handle form submission by saving data to mock server and local storage
+    useMockServer().saveData("customers", formData);
+    localStorage.setItem("customerData", JSON.stringify(formData));
+    console.log("Data saved to mock server and local storage:", formData);
+    // Reset form data
     setFormData({
       age: "",
       gender: "",

@@ -10,9 +10,10 @@ const Login = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // Save the user's login information
+    // Save the user's login information to mock server and local storage
     saveData("users", { email, password });
-    console.log("Login attempt with email: " + email + " and password: " + password);
+    localStorage.setItem("loginData", JSON.stringify({ email, password }));
+    console.log("Login data saved to mock server and local storage: email:", email);
   };
   return (
     <Container position="relative" overflow="hidden">
