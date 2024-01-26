@@ -22,9 +22,9 @@ const Index = () => {
                 </Button>
                 <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
                   New to Tijarat?{" "}
-                  <Text as="span" color="brand.600" fontWeight="bold">
-                    Create an account
-                  </Text>
+                  <a href="#" style={{ color: "blue", fontWeight: "bold" }}>
+                    Click here to verify your account
+                  </a>
                 </Text>
               </Stack>
             </Stack>
