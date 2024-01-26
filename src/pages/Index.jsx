@@ -6,16 +6,10 @@ const Index = () => {
   const emailInputRef = useRef(null);
 
   const saveAccountInformation = (email) => {
-    // Create a unique key for the user's data to avoid overwriting if local storage is used for multiple accounts
-    const userKey = `account-${email}`;
-    // Check if the user's data already exists
-    if (localStorage.getItem(userKey)) {
-      console.warn(`Account information for ${email} already exists.`);
-    } else {
-      // Save the account information in local storage
-      localStorage.setItem(userKey, JSON.stringify({ email }));
-      console.log(`Account information for ${email} saved.`);
-    }
+    // Simulate sending data to the backend server
+    const { saveData } = useMockServer();
+    saveData(`account-${email}`, { email });
+    console.log(`Account creation requested for:`, email);
   };
 
   const handleAccountCreation = (event) => {
