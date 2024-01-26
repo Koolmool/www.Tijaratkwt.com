@@ -5,11 +5,27 @@ import { FaGoogle, FaApple, FaEnvelope } from "react-icons/fa";
 const Index = () => {
   const emailInputRef = useRef(null);
 
+  const saveAccountInformation = (email) => {
+    // Create a unique key for the user's data to avoid overwriting if local storage is used for multiple accounts
+    const userKey = `account-${email}`;
+    // Check if the user's data already exists
+    if (localStorage.getItem(userKey)) {
+      console.warn(`Account information for ${email} already exists.`);
+    } else {
+      // Save the account information in local storage
+      localStorage.setItem(userKey, JSON.stringify({ email }));
+      console.log(`Account information for ${email} saved.`);
+    }
+  };
+
   const handleAccountCreation = (event) => {
     event.preventDefault();
     const email = emailInputRef.current.value;
+
+    // Save the user's account information
+    saveAccountInformation(email);
+
     console.log("Account creation requested for:", email);
-    // Here we would typically send the email to the backend for account creation and data saving
   };
   return (
     <Container maxW="lg" py={{ base: "12", md: "24" }} px={{ base: "0", sm: "8" }}>
