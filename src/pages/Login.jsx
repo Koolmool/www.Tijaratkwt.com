@@ -8,12 +8,26 @@ const Login = () => {
 
   const { saveData } = useMockServer();
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
-    // Save the user's login information to mock server and local storage
-    saveData("users", { email, password });
-    localStorage.setItem("loginData", JSON.stringify({ email, password }));
-    console.log("Login data saved to mock server and local storage: email:", email);
+    try {
+      const response = await fetch("https://your-server-endpoint/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("Login data saved to server:", result);
+    } catch (error) {
+      console.error("A problem occurred during login:", error);
+    }
   };
   return (
     <Container position="relative" overflow="hidden">

@@ -20,12 +20,27 @@ const CreateAccount = () => {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission by saving data to mock server and local storage
-    useMockServer().saveData("customers", formData);
-    localStorage.setItem("customerData", JSON.stringify(formData));
-    console.log("Data saved to mock server and local storage:", formData);
+    try {
+      const response = await fetch("https://your-server-endpoint/customers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("Data saved to server:", result);
+    } catch (error) {
+      console.error("A problem occurred while saving data:", error);
+    }
+
     // Reset form data
     setFormData({
       age: "",
