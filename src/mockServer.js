@@ -13,9 +13,13 @@ export const useMockServer = () => {
   };
 
   // Simulate a webhook event being received
+  // Placeholder for a real webhook URL
+  const WEBHOOK_URL = "https://api.example.com/webhook";
+
   const simulateWebhook = (eventData) => {
-    console.log("Webhook event received:", eventData);
-    // Here you would typically update your state or perform some action in response to the webhook event
+    console.log(`Webhook event received at ${WEBHOOK_URL}:`, eventData);
+    // In a real implementation, this is where you would make an API call to the webhook URL
+    // Example: axios.post(WEBHOOK_URL, eventData);
   };
 
   const sendCustomerWebhook = (customerData) => {
