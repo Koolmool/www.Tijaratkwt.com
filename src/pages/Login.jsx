@@ -45,7 +45,23 @@ const Login = () => {
         }}
         src="https://ai.invideo.io/workspace/1156e87f-b73e-4322-917c-72fc80f82fd3/v2-copilot/d45b1833-316a-4d50-8643-4da6009acbee"
       ></video>
-      <Box>
+      <video
+        autoPlay={true}
+        muted
+        loop
+        style={{
+          position: "absolute",
+          right: "0",
+          bottom: "0",
+          minWidth: "100%",
+          minHeight: "100%",
+          zIndex: "-1",
+        }}
+        src="path_to_your_video.mp4" // Replace with the actual path to your video file
+      ></video>
+      <Box style={{ position: "relative" }}>
+        {" "}
+        // Ensure the form content is above the video background
         <Heading>Login Page</Heading>
         <Box as="form" onSubmit={handleLogin} p={4}>
           <Stack spacing={4}>
