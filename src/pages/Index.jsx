@@ -7,8 +7,8 @@ const Index = () => {
       <Stack spacing="8">
         <Stack spacing="6">
           <Center>
-            <Heading fontSize={{ base: "3xl", md: "4xl" }} textAlign="center">
-              Login to your account
+            <Heading fontSize={{ base: "2xl", md: "3xl" }} textAlign="center">
+              Welcome Back to Your Shop Name
             </Heading>
           </Center>
           <Box bg={useColorModeValue("white", "gray.700")} py="8" px={{ base: "4", md: "10" }} shadow="base" rounded={{ sm: "lg" }}>
@@ -16,9 +16,17 @@ const Index = () => {
               <Stack spacing="5">
                 <Input placeholder="Enter your email" type="email" />
               </Stack>
-              <Button variant="solid" colorScheme="brand" size="lg" fontSize="md">
-                Sign in with Email <FaEnvelope style={{ marginLeft: "8px" }} />
-              </Button>
+              <Stack spacing="5">
+                <Button variant="solid" colorScheme="brand" size="lg" fontSize="md">
+                  Sign in with Email <FaEnvelope style={{ marginLeft: "8px" }} />
+                </Button>
+                <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
+                  New to Your Shop Name?{" "}
+                  <Text as="span" color="brand.600" fontWeight="bold">
+                    Create an account
+                  </Text>
+                </Text>
+              </Stack>
             </Stack>
           </Box>
         </Stack>
