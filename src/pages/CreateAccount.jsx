@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Button, Container, FormControl, FormLabel, Heading, Input, Select, Stack } from "@chakra-ui/react";
 
 const CreateAccount = () => {
+  useEffect(() => {
+    document.title = "Create Account";
+  }, []);
   return (
     <Container>
       <Box as="form" onSubmit={(e) => e.preventDefault()} p={4}>
