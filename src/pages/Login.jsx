@@ -24,7 +24,7 @@ const Login = () => {
           minHeight: "100%",
           zIndex: "-1",
         }}
-        src="/assets/login-background.mp4"
+        src="https://ai.invideo.io/workspace/1156e87f-b73e-4322-917c-72fc80f82fd3/v2-copilot/d45b1833-316a-4d50-8643-4da6009acbee"
       ></video>
       <Box>
         <Heading>Login Page</Heading>
