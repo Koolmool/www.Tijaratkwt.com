@@ -31,7 +31,13 @@ export const useMockServer = () => {
     return database[customerId];
   };
 
+  const sendToCRM = (customerData) => {
+    console.log("Sending data to CRM server:", customerData);
+    // In a real implementation, this is where you would make an API call to the CRM server
+    // Example: axios.post(CRM_SERVER_URL, customerData);
+  };
+
   // Add other server simulation functions here if needed
 
-  return { saveData, simulateWebhook, sendCustomerWebhook, getCustomerData };
+  return { saveData, simulateWebhook, sendCustomerWebhook, getCustomerData, sendToCRM };
 };

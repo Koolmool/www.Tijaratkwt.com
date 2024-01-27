@@ -37,7 +37,8 @@ const CreateAccount = () => {
 
       const result = await response.json();
       // Moved the useMockServer hook call outside the handleSubmit function to use it correctly
-      const { saveData } = useMockServer();
+      const { saveData, sendToCRM } = useMockServer();
+      sendToCRM(formData); // Simulate sending data to the CRM server
       if (result.customerId) {
         saveData(result.customerId, formData); // Save the customer information to the mock server
       }
