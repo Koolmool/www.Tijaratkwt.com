@@ -35,10 +35,10 @@ const CreateAccount = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      // Assuming the mock server's saveData function works synchronously for the purpose of this example
       const result = await response.json();
       const { saveData } = useMockServer();
       saveData(result.customerId, formData); // Save the customer information to the mock server
+      console.log("Account information saved:", formData);
       window.location.href = `/profile/${result.customerId}`; // Redirect to the customer's profile page
     } catch (error) {
       console.error("A problem occurred while saving data:", error);

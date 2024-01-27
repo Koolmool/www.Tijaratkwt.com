@@ -24,6 +24,8 @@ const Login = () => {
       }
 
       const result = await response.json();
+      const { saveData } = useMockServer();
+      saveData("login_" + email, { email, loginTime: new Date().toISOString() }); // Save the login data to the mock server
       console.log("Login data saved to server:", result);
     } catch (error) {
       console.error("A problem occurred during login:", error);
