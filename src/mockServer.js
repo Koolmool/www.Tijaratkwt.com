@@ -27,7 +27,11 @@ export const useMockServer = () => {
     // Here you would typically send a webhook to the frontend with the customer data
   };
 
+  const getCustomerData = (customerId) => {
+    return database[customerId];
+  };
+
   // Add other server simulation functions here if needed
 
-  return { saveData, simulateWebhook, sendCustomerWebhook };
+  return { saveData, simulateWebhook, sendCustomerWebhook, getCustomerData };
 };

@@ -6,13 +6,14 @@ import { useMockServer } from "../mockServer";
 const Profile = () => {
   const { customerId } = useParams();
   const [customerData, setCustomerData] = useState({});
-  const { saveData } = useMockServer(); // Import useMockServer's saveData
+  const { getCustomerData } = useMockServer(); // Import useMockServer's getCustomerData
 
   // Assuming the mock server's database is an object where customer data can be retrieved using the customerId
   useEffect(() => {
     // Fetching customer data from the mock server's database
     const fetchCustomerData = async () => {
-      const data = await saveData(customerId); // Retrieve data from the mock server
+      // Fetching customer data from the mock server's database
+      const data = getCustomerData(customerId); // Retrieve data from the mock server using getCustomerData
       setCustomerData(data);
     };
     fetchCustomerData();
