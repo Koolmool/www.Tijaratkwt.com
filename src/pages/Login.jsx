@@ -57,7 +57,7 @@ const Login = () => {
           minHeight: "100%",
           zIndex: "-1",
         }}
-        src="path_to_your_video.mp4" // Replace with the actual path to your video file
+        src="https://artlist.io/stock-footage/clip/art-pattern-loop-vj/6055473"
       ></video>
       <Box style={{ position: "relative" }}>
         {" "}
