@@ -36,8 +36,11 @@ const CreateAccount = () => {
       }
 
       const result = await response.json();
+      // Moved the useMockServer hook call outside the handleSubmit function to use it correctly
       const { saveData } = useMockServer();
-      saveData(result.customerId, formData); // Save the customer information to the mock server
+      if (result.customerId) {
+        saveData(result.customerId, formData); // Save the customer information to the mock server
+      }
       console.log("Account information saved:", formData);
       window.location.href = `/profile/${result.customerId}`; // Redirect to the customer's profile page
     } catch (error) {
