@@ -64,7 +64,7 @@ const Login = () => {
       <Box style={{ position: "relative" }}>
         {" "}
         // Ensure the form content is above the video background
-        <Heading>Login Page</Heading>
+        <Heading color="black">Login Page</Heading>
         <Box as="form" onSubmit={handleLogin} p={4}>
           <Stack spacing={4}>
             <FormControl id="email">
@@ -80,7 +80,7 @@ const Login = () => {
             </Button>
           </Stack>
 
-          <Text mt={2} textAlign="right" color="brand.700" cursor="pointer" onClick={() => alert("Password recovery instructions will be sent to your email.")}>
+          <Text mt={2} textAlign="right" color="black" cursor="pointer" onClick={() => alert("Password recovery instructions will be sent to your email.")}>
             Forgot Password?
           </Text>
         </Box>

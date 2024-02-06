@@ -24,7 +24,7 @@ const Index = () => {
       <Stack spacing="8">
         <Stack spacing="6">
           <Center>
-            <Heading fontSize={{ base: "2xl", md: "3xl" }} textAlign="center">
+            <Heading fontSize={{ base: "2xl", md: "3xl" }} textAlign="center" color="black">
               Welcome Back to Tijarat
             </Heading>
           </Center>
@@ -38,7 +38,7 @@ const Index = () => {
                   <Button type="submit" variant="solid" colorScheme="brand" size="lg" fontSize="md" color="black">
                     Sign in with Email <FaEnvelope style={{ marginLeft: "8px" }} />
                   </Button>
-                  <Text textAlign="center" color={useColorModeValue("gray.600", "gray.200")}>
+                  <Text textAlign="center" color="black">
                     New to Tijarat?{" "}
                     <a href="/create-account" style={{ color: "blue", fontWeight: "bold" }}>
                       Click here to create your own account in Tijarat
@@ -55,7 +55,7 @@ const Index = () => {
         </Stack>
         <Center>
           <Divider />
-          <Text fontSize="sm" whiteSpace="nowrap" color={useColorModeValue("gray.500", "gray.400")}>
+          <Text fontSize="sm" whiteSpace="nowrap" color="black">
             or continue with
           </Text>
           <Divider />

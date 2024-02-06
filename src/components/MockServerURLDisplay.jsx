@@ -5,7 +5,7 @@ const MockServerURLDisplay = () => {
   const mockServerURL = "https://mockserver.example.com"; // Replace with your actual mock server URL
 
   return (
-    <Box p={4} bg="gray.100">
+    <Box p={4} bg="gray.100" color="black">
       <Text>Mock Server URL: {mockServerURL}</Text>
     </Box>
   );

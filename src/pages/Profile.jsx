@@ -26,13 +26,13 @@ const Profile = () => {
   return (
     <Box p={5}>
       <VStack spacing={3} align="flex-start">
-        <Text fontSize="2xl" fontWeight="bold">
+        <Text fontSize="2xl" fontWeight="bold" color="black">
           Customer Profile
         </Text>
-        <Text>Name: {customerData.customerName}</Text>
-        <Text>Email: {customerData.customerEmail}</Text>
-        <Text>Phone: {customerData.customerPhoneNumber}</Text>
-        <Text>Address: {customerData.customerAddress}</Text>
+        <Text color="black">Name: {customerData.customerName}</Text>
+        <Text color="black">Email: {customerData.customerEmail}</Text>
+        <Text color="black">Phone: {customerData.customerPhoneNumber}</Text>
+        <Text color="black">Address: {customerData.customerAddress}</Text>
       </VStack>
     </Box>
   );
