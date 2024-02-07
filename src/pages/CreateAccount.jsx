@@ -66,7 +66,7 @@ const CreateAccount = () => {
   return (
     <Container>
       <Box as="form" onSubmit={handleSubmit} p={4}>
-        <Heading color="black">Create Account Page</Heading>
+        <Heading color="white">Create Account Page</Heading>
         <Stack spacing={4} mt={8} onChange={handleInputChange}>
           {/* Form fields remain unchanged */}
         </Stack>

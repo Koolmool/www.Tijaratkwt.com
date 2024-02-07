@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <Box p={5}>
       <VStack spacing={3} align="flex-start">
-        <Text fontSize="2xl" fontWeight="bold" color="black">
+        <Text fontSize="2xl" fontWeight="bold" color="white">
           Customer Profile
         </Text>
         <Text color="black">Name: {customerData.customerName}</Text>

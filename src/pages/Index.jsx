@@ -24,7 +24,7 @@ const Index = () => {
       <Stack spacing="8">
         <Stack spacing="6">
           <Center>
-            <Heading fontSize={{ base: "2xl", md: "3xl" }} textAlign="center" color="black">
+            <Heading fontSize={{ base: "2xl", md: "3xl" }} textAlign="center" color="white">
               Welcome Back to Tijarat
             </Heading>
           </Center>

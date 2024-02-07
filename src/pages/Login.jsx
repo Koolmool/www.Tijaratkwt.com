@@ -64,7 +64,7 @@ const Login = () => {
       <Box style={{ position: "relative" }}>
         {" "}
         // Ensure the form content is above the video background
-        <Heading color="black">Login Page</Heading>
+        <Heading color="white">Login Page</Heading>
         <Box as="form" onSubmit={handleLogin} p={4}>
           <Stack spacing={4}>
             <FormControl id="email">
