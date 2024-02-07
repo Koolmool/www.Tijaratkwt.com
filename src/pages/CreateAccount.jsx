@@ -4,10 +4,10 @@ import { Box, Button, Container, FormControl, FormLabel, Heading, Input, Select,
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
-    age: "",
-    gender: "",
-    location: "",
+    firstName: "",
+    secondName: "",
     phoneNumber: "",
+    address: "",
     email: "",
     password: "",
   });
@@ -67,8 +67,24 @@ const CreateAccount = () => {
     <Container>
       <Box as="form" onSubmit={handleSubmit} p={4}>
         <Heading color="white">Create Account Page</Heading>
-        <Stack spacing={4} mt={8} onChange={handleInputChange}>
-          {/* Form fields remain unchanged */}
+        <Stack spacing={4} mt={8}>
+          <FormControl id="firstName">
+            <FormLabel>First Name</FormLabel>
+            <Input type="text" id="firstName" value={formData.firstName} onChange={handleInputChange} />
+          </FormControl>
+          <FormControl id="secondName">
+            <FormLabel>Second Name</FormLabel>
+            <Input type="text" id="secondName" value={formData.secondName} onChange={handleInputChange} />
+          </FormControl>
+          <FormControl id="phoneNumber">
+            <FormLabel>Phone Number</FormLabel>
+            <Input type="tel" id="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} />
+          </FormControl>
+          <FormControl id="address">
+            <FormLabel>Address</FormLabel>
+            <Input type="text" id="address" value={formData.address} onChange={handleInputChange} />
+          </FormControl>
+          {/* Other form controls for email and password */}
         </Stack>
       </Box>
     </Container>
