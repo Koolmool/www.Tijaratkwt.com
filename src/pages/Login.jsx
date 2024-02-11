@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useMockServer } from "../mockServer";
 import { Box, Button, Container, FormControl, FormLabel, Heading, Input, Stack, Text } from "@chakra-ui/react";
 
@@ -24,8 +25,10 @@ const Login = () => {
       }
 
       const result = await response.json();
-      const { saveData } = useMockServer();
-      saveData("login_" + email, { email, loginTime: new Date().toISOString() }); // Save the login data to the mock server
+      // Correct the usage of useNavigate and saveData to redirect after successful login
+      const navigate = useNavigate();
+      saveData(result.customerId, { email, loginTime: new Date().toISOString() }); // Save the login data to the mock server
+      navigate(`/profile/${result.customerId}`);
       console.log("Login data saved to server:", result);
     } catch (error) {
       console.error("A problem occurred during login:", error);

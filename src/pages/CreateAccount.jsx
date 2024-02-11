@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useMockServer } from "../mockServer";
 import { Box, Button, Container, FormControl, FormLabel, Heading, Input, Select, Stack } from "@chakra-ui/react";
 
@@ -43,7 +44,9 @@ const CreateAccount = () => {
         saveData(result.customerId, formData); // Save the customer information to the mock server
       }
       console.log("Account information saved:", formData);
-      window.location.href = `/profile/${result.customerId}`; // Redirect to the customer's profile page
+      // Replace with useNavigate for proper redirection after account creation
+      const navigate = useNavigate();
+      navigate(`/profile/${result.customerId}`);
     } catch (error) {
       console.error("A problem occurred while saving data:", error);
     }
