@@ -84,7 +84,14 @@ const CreateAccount = () => {
             <FormLabel>Address</FormLabel>
             <Input type="text" id="address" value={formData.address} onChange={handleInputChange} />
           </FormControl>
-          {/* Other form controls for email and password */}
+          <FormControl id="email">
+            <FormLabel>Email address</FormLabel>
+            <Input type="email" id="email" value={formData.email} onChange={handleInputChange} />
+          </FormControl>
+          <FormControl id="password">
+            <FormLabel>Password</FormLabel>
+            <Input type="password" id="password" value={formData.password} onChange={handleInputChange} />
+          </FormControl>
         </Stack>
       </Box>
     </Container>
