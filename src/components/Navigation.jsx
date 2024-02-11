@@ -1,6 +1,6 @@
 import React from "react";
-import { Flex, Link, Box } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import { Flex, Link, Box, Button } from "@chakra-ui/react";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -16,8 +16,10 @@ const Navigation = () => {
           Create Account
         </Link>
       </Box>
+      <Button onClick={() => useNavigate()(-1)} marginRight="4">
+        Go Back
+      </Button>
     </Flex>
   );
 };
-
 export default Navigation;
