@@ -27,6 +27,7 @@ const Login = () => {
       const result = await response.json();
       // Correct the usage of useNavigate and saveData to redirect after successful login
       const navigate = useNavigate();
+      navigate(`/profile/${result.customerId}`);
       saveData(result.customerId, { email, loginTime: new Date().toISOString() }); // Save the login data to the mock server
       navigate(`/profile/${result.customerId}`);
       console.log("Login data saved to server:", result);
