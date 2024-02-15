@@ -15,12 +15,14 @@ function App() {
       <Box bg="black" w="100%" p={2} color="white">
         {/* Maroon bar at the top of the page */}
       </Box>
+      <Navigation />
       <MockServerURLDisplay />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/profile/:customerId" element={<Profile />} />
+        <Route path="/info-store" element={<InfoStore />} />
       </Routes>
       <WebhookListener />
     </Router>
