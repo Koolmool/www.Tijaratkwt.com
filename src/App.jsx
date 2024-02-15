@@ -23,7 +23,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/profile/:customerId" element={<Profile />} />
-        <Route path="/info-store" element={<InfoStore />} />
       </Routes>
       <WebhookListener />
     </Router>
