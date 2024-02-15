@@ -43,9 +43,5 @@ export const useMockServer = () => {
     console.log("Customer data updated on mock server:", newData);
   };
 
-  const getAllCustomerData = () => {
-    return Object.values(database);
-  };
-
-  return { saveData, simulateWebhook, sendCustomerWebhook, getCustomerData, sendToCRM, updateCustomerData, getAllCustomerData };
+  return { saveData, simulateWebhook, sendCustomerWebhook, getCustomerData, sendToCRM, updateCustomerData };
 };
