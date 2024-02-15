@@ -6,6 +6,9 @@ const Navigation = () => {
   return (
     <Flex bg="gray.800" color="white" justifyContent="space-between" p={3} align="center">
       <Box>
+        <Button as="a" href="https://preview-03dd3b13--product-details-ecommerce.gptengineer.run/" px={2} colorScheme="blue">
+          Login
+        </Button>
         <Link as={RouterLink} to="/create-account" px={2}>
           Create Account
         </Link>
