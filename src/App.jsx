@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import Profile from "./pages/Profile";
 import WebhookListener from "./components/WebhookListener";
+import InfoStore from "./pages/InfoStore";
 import { Box } from "@chakra-ui/react";
 import Navigation from "./components/Navigation"; // Import the Navigation component
 import MockServerURLDisplay from "./components/MockServerURLDisplay"; // Import the MockServerURLDisplay component
