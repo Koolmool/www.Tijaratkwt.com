@@ -15,9 +15,6 @@ const Navigation = () => {
         <Link as={RouterLink} to="/create-account" px={2}>
           Create Account
         </Link>
-        <Link as={RouterLink} to="/info-store" px={2}>
-          Info Store
-        </Link>
       </Box>
       <Button onClick={() => useNavigate()(-1)} marginRight="4">
         Go Back
