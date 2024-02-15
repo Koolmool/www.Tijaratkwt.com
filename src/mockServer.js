@@ -37,11 +37,5 @@ export const useMockServer = () => {
     // Example: axios.post(CRM_SERVER_URL, customerData);
   };
 
-  const updateCustomerData = (customerId, updatedData) => {
-    const newData = { ...database, [customerId]: updatedData };
-    setDatabase(newData);
-    console.log("Customer data updated on mock server:", newData);
-  };
-
-  return { saveData, simulateWebhook, sendCustomerWebhook, getCustomerData, sendToCRM, updateCustomerData };
+  return { saveData, simulateWebhook, sendCustomerWebhook, sendToCRM };
 };
