@@ -68,9 +68,6 @@ const Index = () => {
           <Button leftIcon={<FaInstagram size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Instagram
           </Button>
-          <Button variant="solid" size="sm" colorScheme="blue" onClick={() => window.open("https://docs.google.com/document/d/your-template-id", "_blank")}>
-            Open Google Docs Template
-          </Button>
         </Stack>
       </Stack>
     </Container>
