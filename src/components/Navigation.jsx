@@ -13,7 +13,7 @@ const Navigation = () => {
           Create Account
         </Link>
       </Box>
-      <Button onClick={() => useNavigate()(-1)} marginRight="4">
+      <Button onClick={() => (window.location.href = "https://preview-ad3df2ed--product-details-ecommerce.gptengineer.run/")} marginRight="4">
         Go Back
       </Button>
     </Flex>
