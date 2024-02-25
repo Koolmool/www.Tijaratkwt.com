@@ -64,7 +64,9 @@ const Index = () => {
           <Button leftIcon={<FaGoogle size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Google
           </Button>
-          {/* ... Other sign-in buttons ... */}
+          <Button leftIcon={<FaApple size="20px" />} variant="outline" size="sm" colorScheme="brand">
+            Sign in with iCloud
+          </Button>
           <Button leftIcon={<FaInstagram size="20px" />} variant="outline" size="sm" colorScheme="brand">
             Sign in with Instagram
           </Button>
