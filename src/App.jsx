@@ -13,9 +13,7 @@ import MockServerURLDisplay from "./components/MockServerURLDisplay"; // Import 
 function App() {
   return (
     <Router>
-      <Box bg="black" w="100%" p={2} color="white">
-        {/* Maroon bar at the top of the page */}
-      </Box>
+      <Box bg="black" w="100%" p={2} color="white" />
       <Navigation />
       <MockServerURLDisplay />
       <Routes>
